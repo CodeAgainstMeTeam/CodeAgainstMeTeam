@@ -1,4 +1,4 @@
-#!C:\Users\50685\PycharmProjects\CAM\venv\Scripts\python.exe
+#!G:\CLPR\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==10.0.1','console_scripts','pip3'
 __requires__ = 'pip==10.0.1'
 import re

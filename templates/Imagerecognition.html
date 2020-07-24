@@ -1,0 +1,170 @@
+<!--
+'''
+author:张敬民、尹迎春、费一朔
+create time:2020-07-13
+update time:2020-07-24
+'''
+-->
+<div class="ai-module-demo ai-module-section js-module-section" linknav="true">
+    <div class="ai-module-header">
+        功能演示
+        <!----></div>
+    <div class="ai-module-demo-container">
+        <div class="tech-recognition">
+            <div class="ai-container">
+                <div class="ai-module-tab">
+                    <div class="ai-module-tab-container"></div>
+                </div>
+                <div class="tech-recognition-content">
+                    <div class="tech-recognition-scan" style="display: none;"></div>
+                    <div class="tech-img-content">
+                        <div class="tech-canvas-container">
+                            <div class="demo-loading" style="display: none;">
+                                <div class="demo-loading-img"></div>
+                                <div class="demo-loading-text">图片上传中</div>
+                            </div>
+                            <div class="demo-data-error-msg" style="display: none;"><img
+                                    src="//aip.bdstatic.com/portal-pc-node/dist/1594956689933/images/error/error.png"
+                                    alt="" class="error-img">
+                                <div class="error-text"></div>
+                            </div>
+                            <div class="image-input">
+                                <div class="image-input-container"><input type="text" spallcheck="false"
+                                                                          placeholder="请输入网络图片URL" class="image-url">
+                                    <button class="image-button">检测</button>
+                                    <div class="image-text">或</div>
+                                    <label class="image-local"><input type="file"
+                                                                      accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                                      class="image-local-input">
+                                        本地上传
+                                    </label></div>
+                                <div class="image-notice">图片文件类型支持PNG、JPG、JPEG、BMP，图片大小不超过2M。</div>
+                            </div>
+                            <canvas class="demo-canvas-centerlize" width="1680" height="1048"
+                                    style="transform: translate(-50%, -50%) scale(0.5);"></canvas>
+                        </div>
+                        <div class="image-select">
+                            <div class="image-select-item is-active"><img
+                                    src="https://ai.bdstatic.com/file/BF5B05DAE4E94D74A69D54ECC20C1D1A"></div>
+                            <div class="image-select-item"><img
+                                    src="https://ai.bdstatic.com/file/1FC3EA37DC194E749C069B636657AF55"></div>
+                            <div class="image-select-item"><img
+                                    src="https://ai.bdstatic.com/file/AA5109C64DDD4FDBAB32BD4F3204D2C7"></div>
+                            <div class="image-select-item"><img
+                                    src="https://ai.bdstatic.com/file/8E361EDAF8144B9FB370CDFB4894D8EC"></div>
+                            <div class="image-select-item"><img
+                                    src="https://ai.bdstatic.com/file/58F48CE88D82434BBF98BB1D6018F2AF"></div>
+                        </div>
+                    </div>
+                    <div class="demo-json">
+                        <div class="demo-collapse">
+                            <div class="demo-collapse-item">
+                                <div class="demo-collapse-item-title demo-json-title">
+                                    识别结果
+                                    <span class="demo-collapse-item-arrow is-active"></span></div>
+                                <div class="demo-collapse-item-cnt" style="height: 504px; opacity: 1;"><!---->
+                                    <ul class="result-item">
+                                        <li class="result-item"><span class="result-num result-title">序号</span> <span
+                                                class="result-text result-title">内容</span></li>
+                                        <li class="result-item"><span class="result-num">1</span>
+                                            <div class="result-text">
+                                                <div><!----> <span>京KBT355</span></div>
+                                                <div><!----> <span>蓝牌</span></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="demo-collapse-item">
+                                <div class="demo-collapse-item-title demo-json-title">
+                                    Request
+                                    <span class="demo-collapse-item-arrow"></span></div>
+                                <div class="demo-collapse-item-cnt" style="height: 0px; opacity: 0;">
+                                    <div class="demo-json-req">
+                                        <div class="json-request-params"><!----> <!----></div>
+                                        <div class="json-request-params"><!----> <!----></div>
+                                        <div class="json-request-params"><!----> <!----></div>
+                                        <div class="demo-json-line">
+                                            Params
+                                            <div class="demo-json-text">image="图片的Base64编码"</div>
+                                            <div class="demo-json-text" style="display: none;">
+                                                <div>type=https://aip.baidubce.com/rest/2.0/ocr/v1/license_plate</div>
+                                            </div>
+                                            <div class="demo-json-text" style="display: none;">
+                                                <div>multi_detect=true</div>
+                                            </div>
+                                            <div class="demo-json-text" style="display: none;">
+                                                <div>aiPortalDemoType=advance</div>
+                                            </div>
+                                        </div>
+                                        <div class="demo-json-line">
+                                            Post
+                                            <div class="demo-json-text">
+                                                https://aip.baidubce.com/rest/2.0/ocr/v1/license_plate?access_token="您的access_token"
+                                            </div>
+                                        </div>
+                                        <div class="demo-json-line">
+                                            Header
+                                            <div class="demo-json-text">Content-Type:
+                                                "application/x-www-form-urlencoded"
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-collapse-item">
+                                <div class="demo-collapse-item-title demo-json-title">
+                                    Response
+                                    <span class="demo-collapse-item-arrow"></span></div>
+                                <div class="demo-collapse-item-cnt" style="height: 0px; opacity: 0;">
+                                    <div class="demo-json-res"><a href="https://ai.baidu.com/docs#/OCR-API-Plate/top"
+                                                                  target="_blank" class="demo-json-link">查看接口文档 &gt;</a>
+                                        <div class="demo-json-content">{
+                                            <span class="hljs-attr">"words_result"</span>: [
+                                            {
+                                            <span class="hljs-attr">"number"</span>: <span
+                                                    class="hljs-string">"京KBT355"</span>,
+                                            <span class="hljs-attr">"vertexes_location"</span>: [
+                                            {
+                                            <span class="hljs-attr">"x"</span>: <span class="hljs-number">500</span>,
+                                            <span class="hljs-attr">"y"</span>: <span class="hljs-number">587</span>
+                                            },
+                                            {
+                                            <span class="hljs-attr">"x"</span>: <span class="hljs-number">794</span>,
+                                            <span class="hljs-attr">"y"</span>: <span class="hljs-number">588</span>
+                                            },
+                                            {
+                                            <span class="hljs-attr">"x"</span>: <span class="hljs-number">794</span>,
+                                            <span class="hljs-attr">"y"</span>: <span class="hljs-number">677</span>
+                                            },
+                                            {
+                                            <span class="hljs-attr">"x"</span>: <span class="hljs-number">498</span>,
+                                            <span class="hljs-attr">"y"</span>: <span class="hljs-number">675</span>
+                                            }
+                                            ],
+                                            <span class="hljs-attr">"color"</span>: <span
+                                                    class="hljs-string">"blue"</span>,
+                                            <span class="hljs-attr">"probability"</span>: [
+                                            <span class="hljs-number">0.99999964237213</span>,
+                                            <span class="hljs-number">0.99998867511749</span>,
+                                            <span class="hljs-number">0.9999772310257</span>,
+                                            <span class="hljs-number">0.99997222423553</span>,
+                                            <span class="hljs-number">0.99999690055847</span>,
+                                            <span class="hljs-number">0.99999809265137</span>,
+                                            <span class="hljs-number">0.99999678134918</span>
+                                            ]
+                                            }
+                                            ],
+                                            <span class="hljs-attr">"log_id"</span>: <span class="hljs-string">"7811673951328279484"</span>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

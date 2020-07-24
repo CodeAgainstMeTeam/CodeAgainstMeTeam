@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--
+'''
+author:张敬民、尹迎春、费一朔
+create time:2020-07-13
+update time:2020-07-24
+'''
+-->
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>车辆识别云服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/templatemo-style.css">
+    <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="site-bg"></div>
+<div class="site-bg-overlay"></div>
+
+<!-- TOP HEADER -->
+<div class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 ">
+                <ul class="main-menu ">
+                    <li style="float:left;">
+                        <a class="show-1 " href="#menu1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车型识别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li style="float:left;">
+                        <a class="show-2 " href="#menu-2">车牌识别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li style="float:left;">
+                        <a class="show-3 " href="#menu-3">车辆检测&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li style="float:left;">
+                        <a class="show-4 " href="#menu-4">车损识别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li style="float:left;">
+                        <a class="show-5 " href="#menu-5">驾驶行为分析&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li style="float:left;">
+                        <a class="show-6 " href="#menu-6">车辆属性识别</a>
+                    </li>
+                </ul>
+            </div>
+            <div class=" social-icons col-md-6 col-sm-6 col-xs-12 ">
+                <p class="phone-info">Call us QQ: <a href="#">960586164</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--main_menu-->
+<div class="visible-xs visible-sm responsive-menu">
+    <a href="#" class="toggle-menu">
+        <i class="fa fa-bars"></i> Show Menu
+    </a>
+    <div class="show-menu">
+        <ul class="main-menu">
+            <li>
+                <a class="show-1 active homebutton" href="#menu1"><i class="fa fa-home"></i>车型识别</a>
+            </li>
+            <li>
+                <a class="show-2 aboutbutton" href="#menu-2"><i class="fa fa-user"></i>车牌识别</a>
+            </li>
+            <li>
+                <a class="show-3 projectbutton" href="#menu-3"><i class="fa fa-camera"></i>车辆检测</a>
+            </li>
+            <li>
+                <a class="show-4 contactbutton" href="#menu-4"><i class="fa fa-envelope"></i>车损识别</a>
+            </li>
+            <li>
+                <a class="show-5 fivebutton" href="#menu-5"><i class="fa fa-location-arrow"></i>驾驶行为分析</a>
+            </li>
+            <li>
+                <a class="show-6 sixbutton" href="#menu-6"><i class="fa fa-car"></i>车辆属性识别</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container" id="page-content">
+    <div class="row">
+        <div class="col-md-3 hidden-sm">
+            <nav id="nav" class="main-navigation hidden-xs hidden-sm">
+                <ul class="main-menu">
+                    <li class="active">
+                        <a class="show-1 active homebutton" href="#"><i class="fa fa-home"></i>车型识别</a>
+                    </li>
+                    <li>
+                        <a class="show-2 aboutbutton" href="#"><i class="fa fa-user"></i>车牌识别</a>
+                    </li>
+                    <li>
+                        <a class="show-3 projectbutton" href="#"><i class="fa fa-camera"></i>车辆检测</a>
+                    </li>
+                    <li>
+                        <a class="show-4 contactbutton" href="#"><i class="fa fa-envelope"></i>车损识别</a>
+                    </li>
+                    <li>
+                        <a class="show-5 fivebutton" href="#"><i class="fa fa-location-arrow"></i>驾驶行为分析</a>
+                    </li>
+                    <li>
+                        <a class="show-6 sixbutton" href="#"><i class="fa fa-flash"></i>车辆属性识别</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        {#    <style>#}
+        {#        <!--#}
+        {#        .div{#}
+        {#        position: absolute;#}
+        {#        border: 2px solid red;#}
+        {#        background-color: #EFEFEF;#}
+        {#        line-height:90px;#}
+        {#        font-size:12px;#}
+        {#        z-index:1000;#}
+        {#        }#}
+        {#        -->#}
+        {#    </style>#}
+        {#		<!-- right-table -->#}
+        {#    <div id="div1" class="div">#}
+        {#        <input type="button" title="开启摄像头" value="开启摄像头" onclick="getMedia()" />#}
+        {#        <video id="video" width="400px" height="350px" autoplay="autoplay" ></video>#}
+        {#    </div>#}
+        {#    <SCRIPT LANGUAGE="JavaScript">#}
+        {#    function sc2(){#}
+        {#    document.getElementById("div1").style.top=(document.documentElement.scrollTop)+"px";#}
+        {#    document.getElementById("div1").style.left=(document.documentElement.scrollLeft)+"px";#}
+        {#    }#}
+        {#    </SCRIPT>#}
+        {##}
+        {#    <div id="div2" class="div"  align="center">#}
+        {#        <canvas id="canvas" width="400px" height="350px"></canvas>#}
+        {#        <button id="snap" onclick="takePhoto()">拍照</button>#}
+        {#    </div>#}
+        {#    <SCRIPT LANGUAGE="JavaScript">#}
+        {#    function sc4(){#}
+        {#    document.getElementById("div2").style.top=(document.documentElement.scrollTop)+"px";#}
+        {#    document.getElementById("div2").style.left=(document.documentElement.scrollLeft+document.documentElement.clientWidth-document.getElementById("div1").offsetWidth)+"px";#}
+        {#    }#}
+        {#    </SCRIPT>#}
+        <div class="col-md-9 col-sm-12 content-holder">
+            <div id="menu-container">
+                <div id="menu-1" class="content homepage home-section text-center ">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="box-content">
+                                <h3 class="widget-title">车型识别</h3>
+                                <img class="test" id='test' src="{{ url_for('static',filename=cx,_t=val1) }}"
+                                     width="400" height="350"/>
+
+                                <form class="contact-form" action="{{ url_for('cxsb') }}" enctype='multipart/form-data'
+                                      method='POST'>
+                                    <div class="image-input">
+                                        <div class="image-input-container">
+                                            <input type="text" class="input" id="input" name="url" spallcheck="false"
+                                                   placeholder="请输入网络图片URL" class="image-url">
+                                            <input type="file" name="file"
+                                                   accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                   class="image-local-input">
+                                            <input type="submit" value="上传" class="button-new"/>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                {#                                               <div class="image-text">或</div>#}
+                                {#                                           <label class="image-local"><input id="files" type="file" accept="image/png, image/bmp, image/jpg, image/jpeg" class="image-local-input">#}
+                                {#            本地上传</label></div> <div class="image-notice">图片文件类型支持PNG、JPG、JPEG、BMP，图片大小不超过2M。#}
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box-content">
+                                <h3 class="widget-title">属性列表</h3>
+                                <H1>ID:{{ cxid }}</H1>
+                                <H1>车型:{{ cxh }}</H1>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-2" class="content about-section text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="box-content">
+                                <h3 class="widget-title">车牌识别</h3>
+                                {#                                {{ cp }}#}
+                                <img class="test" src="{{ url_for('static',filename=cp,_t=val1) }}" width="400"
+                                     height="350"/>
+                                {#                                <div id="contentHolder">#}
+                                {#                                                        <input type="button" title="开启摄像头" value="开启摄像头" onclick="getMedia()" />#}
+                                {#                                                        <video id="video" width="400px" height="350px" autoplay="autoplay" ></video>#}
+                                {#                                                        <canvas id="canvas" width="400px" height="350px"></canvas>#}
+                                {#                                                        <button id="snap" onclick="takePhoto()">拍照</button>#}
+                                {#                                </div>#}
+                                <form class="contact-form" action="{{ url_for('cpsb') }}" enctype='multipart/form-data'
+                                      method='POST'>
+                                    <div class="image-input">
+                                        <div class="image-input-container">
+                                            <input type="text" class="input" id="input" name="url" spallcheck="false"
+                                                   placeholder="请输入网络图片URL" class="image-url">
+                                            <input type="file" name="file"
+                                                   accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                   class="image-local-input">
+                                            <input type="submit" value="上传" class="button-new"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box-content">
+                                <h3 class="widget-title">属性列表</h3>
+                                <H1>{{ cpsbresult }}</H1>
+                                <H1>{{ confidence2 }}</H1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-3" class="content gallery-section text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="box-content">
+                                <h3 class="widget-title">车辆检测</h3>
+                                {#                                {{ cljc }}#}
+                                <img class="test" src="{{ url_for('static',filename=cljc,_t=val1) }}" width="400"
+                                     height="350"/>
+
+                                <form class="contact-form" action="cljc" enctype='multipart/form-data' method='POST'>
+                                    <div class="image-input">
+                                        <div class="image-input-container">
+                                            <input type="text" class="input" id="input" name="url" spallcheck="false"
+                                                   placeholder="请输入网络图片URL" class="image-url">
+                                            <input type="file" name="file"
+                                                   accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                   class="image-local-input">
+                                            <input type="submit" value="上传" class="button-new"/>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box-content">
+                                <h3 class="widget-title">属性列表</h3>
+                                <H1>摩托车:{{ motorbike_num }}</H1>
+                                <H1>三轮车:{{ tricycle_num }}</H1>
+                                <H1>小汽车:{{ car_num }}</H1>
+                                <H1>卡车:{{ truck_num }}</H1>
+                                <H1>公交:{{ bus_num }}</H1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-4" class="content contact-section text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="box-content">
+                                <h3 class="widget-title">车损识别</h3>
+                                {#                                {{ cs }}#}
+                                <img class="test" src="{{ url_for('static',filename=cs,_t=val1) }}" width="400"
+                                     height="350"/>
+
+                                <form class="contact-form" action="cssb" enctype='multipart/form-data' method='POST'>
+                                    <div class="image-input">
+                                        <div class="image-input-container">
+                                            <input type="text" class="input" id="input" name="url" spallcheck="false"
+                                                   placeholder="请输入网络图片URL" class="image-url">
+                                            <input type="file" name="file"
+                                                   accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                   class="image-local-input">
+                                            <input type="submit" value="上传" class="button-new"/>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box-content">
+                                <h3 class="widget-title">车损识别结果</h3>
+                                {% for str in str1 %}
+                                    <p>{{ str }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-5" class="content contact-section text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="box-content">
+                                <h3 class="widget-title">驾驶行为分析</h3>
+                                {#                                {{jsxwfx  }}#}
+                                <img class="test" src="{{ url_for('static',filename=jsxwfx,_t=val1) }}" width="400"
+                                     height="350"/>
+
+                                <form class="contact-form" action="jsxwfx" enctype='multipart/form-data' method='POST'>
+                                    <div class="image-input">
+                                        <div class="image-input-container">
+                                            <input type="text" class="input" id="input" name="url" spallcheck="false"
+                                                   placeholder="请输入网络图片URL" class="image-url">
+                                            <input type="file" name="file"
+                                                   accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                   class="image-local-input">
+                                            <input type="submit" value="上传" class="button-new"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box-content">
+                                <h3 class="widget-title">属性列表</h3>
+                                <H1>{{ both_hands_leaving_wheel }}</H1>
+                                <H1>{{ eyes_closed }}</H1>
+                                <H1>{{ no_face_mask }}</H1>
+                                <H1>{{ not_buckling_up }}</H1>
+                                <H1>{{ smoke }}</H1>
+                                <H1>{{ cellphone }}</H1>
+                                <H1>{{ not_facing_front }}</H1>
+                                <H1>{{ yawning }}</H1>
+                                <H1>{{ head_lowered }}</H1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-6" class="content contact-section text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="box-content">
+                                <h3 class="widget-title">车辆属性识别</h3>
+                                <img class="test" src="{{ url_for('static',filename=clsxsb,_t=val1) }}" width="400"
+                                     height="350"/>
+
+                                <form class="contact-form" action="clsxsb" enctype='multipart/form-data' method='POST'>
+                                    <div class="image-input">
+                                        <div class="image-input-container">
+                                            <input type="text" class="input" id="input" name="url" spallcheck="false"
+                                                   placeholder="请输入网络图片URL" class="image-url">
+                                            <input type="file" name="file"
+                                                   accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                   class="image-local-input">
+                                            <input type="submit" value="上传" class="button-new"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box-content">
+                                <h3 class="widget-title">属性列表</h3>
+                                {% for st in str2 %}
+                                    {% for str in st %}
+                                        <p>{{ str }}</p>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页面底部 -->
+<div class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Copyright &copy; 2020 CAMT | More Information come from Code Against Me Team</p>
+            </div>
+        </div>
+    </div>
+</div> <!-- .site-footer -->
+
+<script src="/static/js/vendor/jquery-1.10.2.min.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<!--控制页面刷新后调回原来位置-->
+<script>
+    $(function () {
+
+        var getIndexNum = sessionStorage.getItem("tabLiNum");
+        $(".main-menu li").eq(getIndexNum).addClass('active').siblings().removeClass('active');
+        $(".content").eq(getIndexNum).show().siblings(".content").hide();
+
+        $(".main-menu li").on('click', function () {
+
+            $(this).addClass('active').siblings().removeClass('active');
+            $(".content").eq($(this).index()).show().siblings(".content").hide();
+
+            var indexNum = $(this).index(); //所点击li的索引值
+            console.log("当前li的下标为：", indexNum); //打印索引值
+
+            sessionStorage.setItem("tabLiNum", indexNum); //将(下标名称，索引值)存入session中
+        })
+
+    })
+</script>
+<script>
+    //获得video摄像头区域
+    let video = document.getElementById("video");
+
+    function getMedia() {
+        let constraints = {
+            video: {width: 400, height: 350},
+            audio: true
+        };
+        /*
+        这里介绍新的方法:H5新媒体接口 navigator.mediaDevices.getUserMedia()
+        这个方法会提示用户是否允许媒体输入,(媒体输入主要包括相机,视频采集设备,屏幕共享服务,麦克风,A/D转换器等)
+        返回的是一个Promise对象。
+        如果用户同意使用权限,则会将 MediaStream对象作为resolve()的参数传给then()
+        如果用户拒绝使用权限,或者请求的媒体资源不可用,则会将 PermissionDeniedError作为reject()的参数传给catch()
+        */
+        let promise = navigator.mediaDevices.getUserMedia(constraints);
+        promise.then(function (MediaStream) {
+            video.srcObject = MediaStream;
+            video.play();
+        }).catch(function (PermissionDeniedError) {
+            console.log(PermissionDeniedError);
+        })
+    }
+
+    function takePhoto() {
+        //获得Canvas对象
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, 400, 350);
+        //获取浏览器页面的画布对象
+        //以下开始编 数据
+        var imgData = canvas.toDataURL();
+
+        document.getElementsByClassName("input").value = imgData;
+        document.getElementsByClassName("test").src = imgData;
+
+
+    }
+</script>
+</body>
+</html>

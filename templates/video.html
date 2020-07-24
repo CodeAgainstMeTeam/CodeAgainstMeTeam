@@ -1,0 +1,50 @@
+<!DOCTYPE HTML >
+<!--
+'''
+author:朱一凡
+create time:2020-07-13
+update time:2020-07-24
+'''
+-->
+<html>
+<head>
+    <title>视频实时识别</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="css/video-js.css" rel="stylesheet">
+    <style>
+        .m {
+            width: 840px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <input id="v_file" type="file" style="display: none;"
+           onChange="play()"/></button>
+    <video id="video_id" controls autoplay width="740" height="400">
+        您的浏览器不支持 HTML5 video 标签
+    </video>
+    <br><br>
+    <button id="play" onClick="selectFiles()">播放文件</button>
+</div>
+<script type="text/javascript">
+    function selectFiles() {
+        var v_file = document.getElementById('v_file');
+        v_file.click();
+    }
+
+    function play() {
+        var file = document.getElementById('v_file').files[0];
+        var url = URL.createObjectURL(file);
+        console.log(url);
+        document.getElementById("video_id").src = url;
+    }
+</script>
+</body>
+</html>
