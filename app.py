@@ -33,7 +33,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'JPG', 'PNG', 'bmp'])
 def download_img(img_url):
     basepath = os.path.dirname(__file__)
 
-    path = basepath + '/' + 'static/picture' + '/' "test" + '.jpg'
+    path = basepath + '/' + 'static/picture' + '/'+img_url[30:33] + '.jpg'
     response = requests.get(img_url)
     image = Image.open(BytesIO(response.content))
     ls_f = base64.b64encode(BytesIO(response.content).read()).decode('utf-8')
@@ -41,7 +41,7 @@ def download_img(img_url):
     file = open(path, 'wb')
     file.write(imgdata)
     file.close()
-    return"test" + '.jpg'
+    return img_url[30:33] + '.jpg'
 
 
 def allowed_file(filename):
@@ -86,13 +86,14 @@ def cxsb():
             # 使用Opencv转换一下图片格式和名称
             return render_template('index.html', cx="picture/" + name, cxid=id, cxh=cx, val1=time.time())
         else:
-            base=url[0:21]
-            if base.find("base64"):
+            base=url[0:22]
+            
+            if "base64" in base:
                 url64=url[22:]
                 basepath = os.path.dirname(__file__)
                 imgdata = base64.b64decode(url64)
-                name="test"+ '.png'
-                file = open('static/picture/'+ '/' + "test" + '.png', 'wb')
+                name=url[30:34]+".jpg"
+                file = open('static/picture/'+ '/' + url[30:34]+".jpg", 'wb')
                 file.write(imgdata)
                 file.close()
                 image = cv2.imread('static/picture/' + name)
@@ -151,21 +152,21 @@ def cpsb():
             return render_template('index.html', cp="picture/" + name, cpsbresult=res, confidence2=confidence,
                                    val1=time.time())
         else:
-            base = url[0:21]
-            if base.find("base64"):
+            base = url[0:22]
+            if "base64" in base:
                 url64 = url[22:]
                 basepath = os.path.dirname(__file__)
                 imgdata = base64.b64decode(url64)
-                name = "test" + '.png'
+                name = url[30:34]+".jpg"
                 path = 'static/picture/' + name
-                file = open('static/picture/' + '/' + "test" + '.png', 'wb')
+                file = open('static/picture/' + '/' + url[30:34]+".jpg", 'wb')
                 file.write(imgdata)
                 file.close()
                 image = cv2.imread('static/picture/' + name)
                 print(name)
                 img, res, confidence = licenseRecognition.visual_draw_position(path)
 
-                name = f.filename.split(".")[0] + "_rec" + ".jpg"
+                name = name.split(".")[0] + "_rec" + ".jpg"
                 upload_path1 = os.path.join(basepath, 'static/picture', secure_filename(name))
 
                 cv2.imwrite(upload_path1, img)
@@ -216,21 +217,21 @@ def cljc():
                                    tricycle_num=tricycle_num, car_num=car_num, truck_num=truck_num, bus_num=bus_num,
                                    val1=time.time())
         else:
-            base = url[0:21]
-            if base.find("base64"):
+            base = url[0:22]
+            if "base64" in base:
                 url64 = url[22:]
                 basepath = os.path.dirname(__file__)
                 imgdata = base64.b64decode(url64)
-                name = "test" + '.png'
+                name = url[30:34]+".jpg"
                 path = 'static/picture/' + name
-                file = open('static/picture/' + '/' + "test" + '.png', 'wb')
+                file = open('static/picture/' + '/' + url[30:34]+".jpg", 'wb')
                 file.write(imgdata)
                 file.close()
                 image = cv2.imread('static/picture/' + name)
                 print(name)
                 image_rec, motorbike_num, tricycle_num, car_num, truck_num, bus_num = vehicleDetection.vehicleDetection1(
                     path)
-                name = f.filename.split(".")[0] + "_rectangle1" + ".jpg"
+                name = name.split(".")[0] + "_rectangle1" + ".jpg"
                 upload_path1 = os.path.join(basepath, 'static/picture', secure_filename(name))
                 # image = Image.fromarray(cv2.cvtColor(imagekuang, cv2.COLOR_BGR2RGB))
                 # image_rectangle.save(upload_path1)
@@ -282,14 +283,14 @@ def cssb():
             print(str2)
             return render_template('index.html', cs="picture/" + str(f.filename), str1=str2, val1=time.time())
         else:
-            base = url[0:21]
-            if base.find("base64"):
+            base = url[0:22]
+            if "base64" in base:
                 url64 = url[22:]
                 basepath = os.path.dirname(__file__)
                 imgdata = base64.b64decode(url64)
-                name = "test" + '.png'
+                name = url[30:34]+".jpg"
                 path = 'static/picture/' + name
-                file = open('static/picture/' + '/' + "test" + '.png', 'wb')
+                file = open('static/picture/' + '/' + url[30:34]+".jpg", 'wb')
                 file.write(imgdata)
                 file.close()
                 image = cv2.imread('static/picture/' + name)
@@ -340,14 +341,14 @@ def jsxwfx():
                                    cellphone=cellphone, not_facing_front=not_facing_front, yawning=yawning,
                                    head_lowered=head_lowered, val1=time.time())
         else:
-            base = url[0:21]
-            if base.find("base64"):
+            base = url[0:22]
+            if "base64" in base:
                 url64 = url[22:]
                 basepath = os.path.dirname(__file__)
                 imgdata = base64.b64decode(url64)
-                name = "test" + '.png'
+                name = url[30:34]+".jpg"
                 path = 'static/picture/' + name
-                file = open('static/picture/' + '/' + "test" + '.png', 'wb')
+                file = open('static/picture/' + '/' + url[30:34]+".jpg", 'wb')
                 file.write(imgdata)
                 file.close()
                 image = cv2.imread('static/picture/' + name)
@@ -355,7 +356,7 @@ def jsxwfx():
                 both_hands_leaving_wheel, eyes_closed, no_face_mask, not_buckling_up, smoke, cellphone, not_facing_front, yawning, head_lowered = drivingBehaviorAnalysis.drivingBehaviorAnalysis(
                     path)
 
-                return render_template('index.html', jsxwfx="picture/" + str(f.filename),
+                return render_template('index.html', jsxwfx="picture/" + name,
                                        both_hands_leaving_wheel=both_hands_leaving_wheel, eyes_closed=eyes_closed,
                                        no_face_mask=no_face_mask, not_buckling_up=not_buckling_up, smoke=smoke,
                                        cellphone=cellphone, not_facing_front=not_facing_front, yawning=yawning,
@@ -397,21 +398,21 @@ def clsxsb():
 
             return render_template('index.html', clsxsb="picture/" + str(f.filename), str2=str1, val1=time.time())
         else:
-            base = url[0:21]
-            if base.find("base64"):
+            base = url[0:22]
+            if "base64" in base:
                 url64 = url[22:]
                 basepath = os.path.dirname(__file__)
                 imgdata = base64.b64decode(url64)
-                name = "test" + '.png'
+                name = url[30:34]+".jpg"
                 path = 'static/picture/' + name
-                file = open('static/picture/' + '/' + "test" + '.png', 'wb')
+                file = open('static/picture/' + '/' + url[30:34]+".jpg", 'wb')
                 file.write(imgdata)
                 file.close()
                 image = cv2.imread('static/picture/' + name)
                 print(name)
                 str1 = attributeIdentification.attributeIdentification(path)
 
-                return render_template('index.html', clsxsb="picture/" + str(f.filename), str2=str1, val1=time.time())
+                return render_template('index.html', clsxsb="picture/" + name, str2=str1, val1=time.time())
             else:
                 filename = download_img(url)
                 path = 'static/picture/' + filename

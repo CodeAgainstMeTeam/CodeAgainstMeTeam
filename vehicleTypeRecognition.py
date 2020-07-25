@@ -113,7 +113,6 @@ def vehicleTypeRecognition(image):
                 k = k + 1
             # 从字母a开始每次+1
             t = chr(ord("a") + k)
-
             # 写入文件夹，不支持int，故用字母
             # cv2.imwrite(savepath + "/" + filename.split(".")[0] + "_" + t + ".jpg", cut)
             # # 调用cv.2的imwrite函数保存图片
